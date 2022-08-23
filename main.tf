@@ -1,3 +1,4 @@
+# Create the VM
 resource "openstack_compute_instance_v2" "project_sidewalk" {
   name = "project_sidewalk"
   image_id = "79ccd58e-931a-406a-af16-7d62529b0bd2" # Debian 10
@@ -6,7 +7,7 @@ resource "openstack_compute_instance_v2" "project_sidewalk" {
   security_groups = ["default"]
 
   network {
-    name = "def-vfast-dev-network"
+    name = "a-network"
   }
 }
 
